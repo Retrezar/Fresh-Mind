@@ -85,7 +85,7 @@
       padding-top: 90px;
       background: var(--white);
     }
-    .hero-text { animation: fadeUp .9s ease both; }
+    .hero-text { animation: fadeUp .9s ease forwards; }
     .hero-eyebrow {
       display: inline-block;
       font-size: .75rem; letter-spacing: .14em; text-transform: uppercase;
@@ -328,7 +328,7 @@
       from { opacity: 0; }
       to   { opacity: 1; }
     }
-    .reveal { opacity: 0; transform: translateY(24px); transition: opacity .7s ease, transform .7s ease; }
+    .reveal { opacity: 1; transform: translateY(24px); transition: opacity .7s ease, transform .7s ease; }
     .reveal.visible { opacity: 1; transform: none; }
 
     /* ── RESPONSIVE ──────────────────────────────── */
@@ -678,8 +678,10 @@
       entries.forEach(e => {
         if (e.isIntersecting) { e.target.classList.add('visible'); io.unobserve(e.target); }
       });
-    }, { threshold: .12 });
+    }, { threshold: 0.05 });
     reveals.forEach(el => io.observe(el));
+    // Fallback: ensure content visible even if IntersectionObserver fails
+    setTimeout(() => { reveals.forEach(el => el.classList.add('visible')); }, 800);
 
     /* ── FAQ accordion ── */
     function toggleFaq(btn) {
@@ -782,11 +784,25 @@
        ④ SUPABASE AUTH – Google OAuth
     ═══════════════════════════════════════════════ */
     async function googleSignIn() {
-      const { error } = await sb.auth.signInWithOAuth({
-        provider: 'google',
-        options : { redirectTo: window.location.origin }
-      });
-      if (error) alert('Google Sign-In failed: ' + error.message);
+      // Check if Supabase is configured
+      if (document.querySelector('script[src*="supabase"]') &&
+          typeof sb !== 'undefined') {
+        try {
+          const { error } = await sb.auth.signInWithOAuth({
+            provider: 'google',
+            options : { redirectTo: window.location.origin }
+          });
+          if (error) throw error;
+        } catch(err) {
+          if (err.message && (err.message.includes('Invalid') || err.message.includes('not found'))) {
+            alert('Login is not yet configured. Please contact us at freshmind@gmail.com to book a session.');
+          } else {
+            alert('Sign-in error: ' + err.message);
+          }
+        }
+      } else {
+        alert('Please contact us at freshmind@gmail.com to book your free consultation.');
+      }
     }
 
     /* ── SUPABASE AUTH – Email / Password ── */
