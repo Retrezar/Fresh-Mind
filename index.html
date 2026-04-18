@@ -1,0 +1,676 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Fresh Mind – Weed-Related Anxiety Overcome Consulting in India</title>
+  <meta name="description" content="Fresh Mind offers personalised weed-related anxiety overcome consulting in India. Join 50+ real recovery stories and speak with an expert online today." />
+  <meta name="keywords" content="weed related anxiety overcome consulting in india, weed related anxiety overcome consulting, weed anxiety overcome consulting online" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+
+  <style>
+    /* ── RESET & BASE ──────────────────────────────── */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --teal:    #4a8c7f;
+      --teal-lt: #6bab9e;
+      --teal-xlt:#e8f3f1;
+      --warm:    #f7f3ef;
+      --white:   #ffffff;
+      --ink:     #1c1c1c;
+      --muted:   #6b6b6b;
+      --rose:    #c9847a;
+      --font-display: 'Cormorant Garamond', Georgia, serif;
+      --font-body:    'DM Sans', sans-serif;
+    }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: var(--font-body);
+      color: var(--ink);
+      background: var(--white);
+      overflow-x: hidden;
+    }
+    img { display: block; max-width: 100%; }
+    a  { text-decoration: none; color: inherit; }
+
+    /* ── TYPOGRAPHY ───────────────────────────────── */
+    h1,h2,h3,h4 { font-family: var(--font-display); font-weight: 400; line-height: 1.2; }
+    h1 { font-size: clamp(2.6rem, 6vw, 5rem); }
+    h2 { font-size: clamp(2rem, 4.5vw, 3.4rem); }
+    h3 { font-size: 1.5rem; }
+    p  { font-size: 1rem; line-height: 1.75; color: var(--muted); }
+
+    /* ── NAVBAR ───────────────────────────────────── */
+    nav {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 1.2rem 5%;
+      background: rgba(255,255,255,0.92);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid rgba(74,140,127,0.12);
+      transition: box-shadow .3s;
+    }
+    nav.scrolled { box-shadow: 0 4px 24px rgba(0,0,0,.06); }
+    .nav-logo { display: flex; align-items: center; gap: .75rem; }
+    .nav-logo img { height: 44px; }
+    .nav-logo span {
+      font-family: var(--font-display);
+      font-size: 1.35rem;
+      letter-spacing: .04em;
+      color: var(--teal);
+    }
+    .nav-links { display: flex; gap: 2.5rem; align-items: center; }
+    .nav-links a { font-size: .875rem; letter-spacing: .06em; text-transform: uppercase; color: var(--ink); transition: color .2s; }
+    .nav-links a:hover { color: var(--teal); }
+    .btn-nav {
+      background: var(--teal); color: var(--white) !important;
+      padding: .55rem 1.4rem; border-radius: 2rem;
+      font-size: .8rem !important; letter-spacing: .08em;
+      transition: background .2s, transform .15s;
+    }
+    .btn-nav:hover { background: var(--teal-lt) !important; transform: translateY(-1px); }
+
+    /* ── HERO ─────────────────────────────────────── */
+    .hero {
+      min-height: 100vh;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      align-items: center;
+      padding: 0 5%;
+      gap: 4rem;
+      padding-top: 90px;
+      background: var(--white);
+    }
+    .hero-text { animation: fadeUp .9s ease both; }
+    .hero-eyebrow {
+      display: inline-block;
+      font-size: .75rem; letter-spacing: .14em; text-transform: uppercase;
+      color: var(--teal); border: 1px solid var(--teal);
+      padding: .3rem .9rem; border-radius: 2rem; margin-bottom: 1.4rem;
+    }
+    .hero h1 { margin-bottom: 1.25rem; }
+    .hero h1 em { font-style: italic; color: var(--teal); }
+    .hero p { max-width: 480px; margin-bottom: 2.2rem; font-size: 1.05rem; }
+    .hero-cta { display: flex; gap: 1rem; flex-wrap: wrap; }
+    .btn-primary {
+      background: var(--teal); color: var(--white);
+      padding: .85rem 2rem; border-radius: 3rem;
+      font-size: .9rem; letter-spacing: .05em;
+      border: 2px solid var(--teal);
+      cursor: pointer; transition: all .2s;
+    }
+    .btn-primary:hover { background: transparent; color: var(--teal); }
+    .btn-secondary {
+      background: transparent; color: var(--teal);
+      padding: .85rem 2rem; border-radius: 3rem;
+      font-size: .9rem; letter-spacing: .05em;
+      border: 2px solid var(--teal);
+      cursor: pointer; transition: all .2s;
+    }
+    .btn-secondary:hover { background: var(--teal); color: var(--white); }
+
+    .hero-visual {
+      position: relative;
+      animation: fadeIn 1.2s ease both;
+    }
+    .hero-img-wrap {
+      border-radius: 2rem; overflow: hidden;
+      aspect-ratio: 1/1;
+      box-shadow: 0 32px 80px rgba(74,140,127,.18);
+    }
+    .hero-img-wrap img { width: 100%; height: 100%; object-fit: cover; }
+    .hero-badge {
+      position: absolute; bottom: -1.5rem; left: -1.5rem;
+      background: var(--white); border-radius: 1.2rem;
+      padding: 1rem 1.4rem;
+      box-shadow: 0 8px 32px rgba(0,0,0,.1);
+      display: flex; align-items: center; gap: .8rem;
+    }
+    .hero-badge .num { font-family: var(--font-display); font-size: 2rem; color: var(--teal); }
+    .hero-badge .lbl { font-size: .78rem; color: var(--muted); line-height: 1.3; }
+
+    /* ── SECTION WRAPPER ─────────────────────────── */
+    section { padding: 7rem 5%; }
+    .section-label {
+      font-size: .72rem; letter-spacing: .18em; text-transform: uppercase;
+      color: var(--teal); margin-bottom: .8rem;
+    }
+    .section-title { margin-bottom: 1.2rem; }
+    .section-sub { max-width: 560px; margin-bottom: 3.5rem; }
+
+    /* ── ABOUT ────────────────────────────────────── */
+    .about { background: var(--warm); }
+    .about-inner {
+      display: grid; grid-template-columns: 1fr 1fr;
+      gap: 5rem; align-items: center;
+    }
+    .about-img {
+      border-radius: 2rem; overflow: hidden;
+      aspect-ratio: 4/5;
+      box-shadow: 0 24px 64px rgba(0,0,0,.09);
+    }
+    .about-img img { width: 100%; height: 100%; object-fit: cover; }
+    .about-text p { margin-bottom: 1.2rem; }
+    .about-stat {
+      display: flex; gap: 2rem; margin-top: 2rem; flex-wrap: wrap;
+    }
+    .stat-item .num { font-family: var(--font-display); font-size: 2.8rem; color: var(--teal); }
+    .stat-item .lbl { font-size: .8rem; color: var(--muted); text-transform: uppercase; letter-spacing: .08em; }
+
+    /* ── SERVICES / HOW IT WORKS ─────────────────── */
+    .services { background: var(--white); }
+    .services-grid {
+      display: grid; grid-template-columns: repeat(3,1fr); gap: 2rem;
+    }
+    .svc-card {
+      border: 1px solid rgba(74,140,127,.18);
+      border-radius: 1.5rem; padding: 2.2rem;
+      transition: box-shadow .3s, transform .3s;
+      cursor: default;
+    }
+    .svc-card:hover { box-shadow: 0 16px 48px rgba(74,140,127,.12); transform: translateY(-4px); }
+    .svc-icon {
+      width: 52px; height: 52px; border-radius: 1rem;
+      background: var(--teal-xlt); display: flex; align-items: center; justify-content: center;
+      margin-bottom: 1.4rem;
+    }
+    .svc-icon svg { width: 26px; height: 26px; stroke: var(--teal); fill: none; stroke-width: 1.6; }
+    .svc-card h3 { font-size: 1.25rem; margin-bottom: .75rem; }
+    .svc-card p { font-size: .9rem; }
+
+    /* ── STORIES ─────────────────────────────────── */
+    .stories { background: var(--teal-xlt); }
+    .stories-grid {
+      display: grid; grid-template-columns: repeat(3,1fr); gap: 2rem;
+    }
+    .story-card {
+      background: var(--white); border-radius: 1.5rem;
+      padding: 2rem; position: relative;
+    }
+    .story-card .quote-mark {
+      font-family: var(--font-display); font-size: 5rem;
+      color: var(--teal); opacity: .18; line-height: .8;
+      position: absolute; top: 1rem; left: 1.5rem;
+    }
+    .story-card p { font-size: .9rem; position: relative; z-index: 1; margin-bottom: 1.2rem; }
+    .story-author { display: flex; align-items: center; gap: .75rem; }
+    .story-avatar {
+      width: 40px; height: 40px; border-radius: 50%;
+      background: var(--teal-xlt);
+      display: flex; align-items: center; justify-content: center;
+      font-family: var(--font-display); font-size: 1rem; color: var(--teal);
+    }
+    .story-author .name { font-size: .85rem; font-weight: 500; }
+    .story-author .loc  { font-size: .75rem; color: var(--muted); }
+
+    /* ── FAQ ─────────────────────────────────────── */
+    .faq { background: var(--white); }
+    .faq-inner { display: grid; grid-template-columns: 1fr 1.6fr; gap: 5rem; align-items: start; }
+    .faq-list { display: flex; flex-direction: column; gap: 1rem; }
+    .faq-item {
+      border: 1px solid rgba(74,140,127,.18);
+      border-radius: 1rem; overflow: hidden;
+    }
+    .faq-q {
+      padding: 1.1rem 1.4rem;
+      font-family: var(--font-body); font-size: .95rem; font-weight: 500;
+      cursor: pointer; display: flex; justify-content: space-between; align-items: center;
+      background: var(--white); border: none; width: 100%; text-align: left; color: var(--ink);
+    }
+    .faq-q .arrow { transition: transform .3s; font-size: 1.2rem; color: var(--teal); }
+    .faq-a {
+      padding: 0 1.4rem; max-height: 0; overflow: hidden;
+      font-size: .9rem; color: var(--muted); transition: max-height .4s ease, padding .3s;
+    }
+    .faq-item.open .faq-a { max-height: 200px; padding: .75rem 1.4rem 1.2rem; }
+    .faq-item.open .arrow { transform: rotate(45deg); }
+
+    /* ── CONTACT ─────────────────────────────────── */
+    .contact { background: var(--warm); }
+    .contact-inner { display: grid; grid-template-columns: 1fr 1fr; gap: 5rem; align-items: center; }
+    .contact-img { border-radius: 2rem; overflow: hidden; aspect-ratio: 4/5; }
+    .contact-img img { width: 100%; height: 100%; object-fit: cover; }
+    .contact-form { display: flex; flex-direction: column; gap: 1.1rem; }
+    .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+    .form-group { display: flex; flex-direction: column; gap: .4rem; }
+    .form-group label { font-size: .78rem; letter-spacing: .06em; text-transform: uppercase; color: var(--teal); }
+    .form-group input,
+    .form-group textarea,
+    .form-group select {
+      border: 1px solid rgba(74,140,127,.28);
+      border-radius: .75rem; padding: .8rem 1rem;
+      font-family: var(--font-body); font-size: .95rem;
+      background: var(--white); outline: none;
+      transition: border .2s;
+    }
+    .form-group input:focus,
+    .form-group textarea:focus { border-color: var(--teal); }
+    .form-group textarea { resize: vertical; min-height: 110px; }
+    .form-note { font-size: .78rem; color: var(--muted); }
+    #form-success {
+      display: none; background: var(--teal-xlt);
+      border-radius: .75rem; padding: 1rem 1.2rem;
+      color: var(--teal); font-size: .9rem;
+    }
+
+    /* ── FOOTER ──────────────────────────────────── */
+    footer {
+      background: var(--ink); color: rgba(255,255,255,.7);
+      padding: 4rem 5% 2rem;
+    }
+    .footer-top {
+      display: grid; grid-template-columns: 2fr 1fr 1fr;
+      gap: 3rem; padding-bottom: 3rem;
+      border-bottom: 1px solid rgba(255,255,255,.1);
+    }
+    .footer-brand .logo-wrap { display: flex; align-items: center; gap: .6rem; margin-bottom: 1rem; }
+    .footer-brand .logo-wrap img { height: 38px; filter: brightness(0) invert(1) opacity(.8); }
+    .footer-brand .logo-wrap span { font-family: var(--font-display); font-size: 1.2rem; color: rgba(255,255,255,.9); }
+    .footer-brand p { font-size: .85rem; line-height: 1.7; color: rgba(255,255,255,.5); max-width: 300px; }
+    .footer-col h4 { font-family: var(--font-display); font-size: 1rem; color: rgba(255,255,255,.9); margin-bottom: 1rem; }
+    .footer-col a { display: block; font-size: .85rem; color: rgba(255,255,255,.5); margin-bottom: .5rem; transition: color .2s; }
+    .footer-col a:hover { color: var(--teal-lt); }
+    .footer-bottom {
+      display: flex; justify-content: space-between; align-items: center;
+      padding-top: 1.5rem; font-size: .8rem; flex-wrap: wrap; gap: 1rem;
+    }
+
+    /* ── AUTH MODAL ──────────────────────────────── */
+    .modal-overlay {
+      position: fixed; inset: 0; background: rgba(0,0,0,.45);
+      backdrop-filter: blur(6px);
+      z-index: 200; display: none;
+      align-items: center; justify-content: center;
+    }
+    .modal-overlay.open { display: flex; }
+    .modal {
+      background: var(--white); border-radius: 2rem;
+      padding: 3rem 2.8rem; max-width: 440px; width: 90%;
+      text-align: center; animation: fadeUp .4s ease;
+    }
+    .modal img.modal-logo { height: 56px; margin: 0 auto 1.5rem; }
+    .modal h2 { font-size: 2rem; margin-bottom: .5rem; }
+    .modal p { font-size: .9rem; margin-bottom: 2rem; }
+    .btn-google {
+      display: flex; align-items: center; justify-content: center; gap: .8rem;
+      width: 100%; padding: .9rem 1.5rem;
+      border: 1.5px solid #dadce0; border-radius: 3rem;
+      font-size: .95rem; font-weight: 500; font-family: var(--font-body);
+      background: var(--white); color: var(--ink); cursor: pointer;
+      transition: box-shadow .2s;
+    }
+    .btn-google:hover { box-shadow: 0 4px 16px rgba(0,0,0,.1); }
+    .btn-google svg { width: 22px; height: 22px; }
+    .modal-close {
+      position: absolute; top: 1rem; right: 1.2rem;
+      background: none; border: none; font-size: 1.6rem; cursor: pointer;
+      color: var(--muted);
+    }
+    .modal { position: relative; }
+    .divider { display: flex; align-items: center; gap: 1rem; margin: 1.5rem 0; }
+    .divider::before, .divider::after { content:''; flex:1; height:1px; background: #eee; }
+    .divider span { font-size: .8rem; color: var(--muted); }
+    .modal-input { width: 100%; padding: .8rem 1rem; border: 1px solid #ddd; border-radius: .75rem; font-family: var(--font-body); font-size: .95rem; margin-bottom: .8rem; outline: none; }
+    .modal-input:focus { border-color: var(--teal); }
+    .modal-submit { width: 100%; padding: .9rem; background: var(--teal); color: #fff; border: none; border-radius: 3rem; font-size: .95rem; font-family: var(--font-body); cursor: pointer; transition: background .2s; }
+    .modal-submit:hover { background: var(--teal-lt); }
+
+    /* ── ANIMATIONS ──────────────────────────────── */
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(28px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to   { opacity: 1; }
+    }
+    .reveal { opacity: 0; transform: translateY(24px); transition: opacity .7s ease, transform .7s ease; }
+    .reveal.visible { opacity: 1; transform: none; }
+
+    /* ── RESPONSIVE ──────────────────────────────── */
+    @media (max-width: 960px) {
+      .hero { grid-template-columns: 1fr; padding-top: 110px; text-align: center; }
+      .hero p { margin: 0 auto 2rem; }
+      .hero-cta { justify-content: center; }
+      .hero-visual { max-width: 400px; margin: 0 auto; }
+      .hero-badge { bottom: -1rem; left: 50%; transform: translateX(-50%); }
+      .about-inner, .contact-inner, .faq-inner { grid-template-columns: 1fr; }
+      .about-img, .contact-img { max-width: 460px; }
+      .services-grid, .stories-grid { grid-template-columns: 1fr 1fr; }
+      .footer-top { grid-template-columns: 1fr 1fr; }
+    }
+    @media (max-width: 600px) {
+      nav { padding: 1rem 4%; }
+      .nav-links { gap: 1rem; }
+      .nav-links a:not(.btn-nav) { display: none; }
+      .services-grid, .stories-grid { grid-template-columns: 1fr; }
+      .form-row { grid-template-columns: 1fr; }
+      .footer-top { grid-template-columns: 1fr; }
+      .footer-bottom { flex-direction: column; text-align: center; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav id="navbar">
+    <div class="nav-logo">
+      <img src="fesrh_mind_logo.png" alt="Fresh Mind Logo" />
+      <span>Fresh Mind</span>
+    </div>
+    <div class="nav-links">
+      <a href="#about">About</a>
+      <a href="#services">How It Works</a>
+      <a href="#stories">Stories</a>
+      <a href="#contact">Contact</a>
+      <a href="#" class="btn-nav" onclick="openModal(event)">Sign In</a>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero" id="home">
+    <div class="hero-text">
+      <span class="hero-eyebrow">Trusted Consulting · India</span>
+      <h1>Overcome <em>Weed-Related<br>Anxiety</em> With Expert Guidance</h1>
+      <p>Fresh Mind offers personalised weed-related anxiety overcome consulting in India — blending clinical insight with 50+ real recovery journeys so you never walk alone.</p>
+      <div class="hero-cta">
+        <a href="#contact" class="btn-primary">Book a Free Consultation</a>
+        <a href="#stories" class="btn-secondary">Read Success Stories</a>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <div class="hero-img-wrap">
+        <img src="001.jpg" alt="Calm, peaceful mind – overcoming weed-related anxiety" />
+      </div>
+      <div class="hero-badge">
+        <span class="num">50+</span>
+        <span class="lbl">Personalised<br>Recovery Stories</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section class="about" id="about">
+    <div class="about-inner reveal">
+      <div class="about-img">
+        <img src="002.jpg" alt="Journey of healing and connection" />
+      </div>
+      <div class="about-text">
+        <p class="section-label">About Fresh Mind</p>
+        <h2 class="section-title">You Are Not Alone in This Journey</h2>
+        <p>Weed-related anxiety is far more common than most people realise — and far more manageable than it might feel right now. At <strong>Fresh Mind Psychology Care</strong>, we have guided hundreds of individuals across India through exactly what you are experiencing.</p>
+        <p>Our approach is rooted in <strong>personalised experience</strong>: every consultation draws on a library of 50+ real stories from people who have overcome weed-related anxiety — giving you concrete, relatable roadmaps, not generic advice.</p>
+        <p>Whether you are dealing with panic after stopping, heightened social anxiety, or chronic worry amplified by cannabis use, our consultants meet you exactly where you are.</p>
+        <div class="about-stat">
+          <div class="stat-item"><div class="num">50+</div><div class="lbl">Stories</div></div>
+          <div class="stat-item"><div class="num">100%</div><div class="lbl">Online &amp; Private</div></div>
+          <div class="stat-item"><div class="num">Pan</div><div class="lbl">India Coverage</div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICES -->
+  <section class="services" id="services">
+    <div class="reveal">
+      <p class="section-label">How It Works</p>
+      <h2 class="section-title">Your Path to a Calmer Mind</h2>
+      <p class="section-sub">Our weed-related anxiety overcome consulting online is structured, compassionate, and built around your unique situation.</p>
+    </div>
+    <div class="services-grid reveal">
+      <div class="svc-card">
+        <div class="svc-icon">
+          <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg>
+        </div>
+        <h3>Initial Assessment</h3>
+        <p>A safe, confidential 30-minute intake where we understand your cannabis history, anxiety patterns, and what recovery means to you.</p>
+      </div>
+      <div class="svc-card">
+        <div class="svc-icon">
+          <svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+        </div>
+        <h3>Story-Led Consulting</h3>
+        <p>We match you with one of our 50+ documented recovery stories most similar to your experience — turning abstract advice into lived proof.</p>
+      </div>
+      <div class="svc-card">
+        <div class="svc-icon">
+          <svg viewBox="0 0 24 24"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/></svg>
+        </div>
+        <h3>Personalised Action Plan</h3>
+        <p>A bespoke weekly plan covering breathwork, cognitive tools, and lifestyle shifts — tailored to your schedule and comfort level.</p>
+      </div>
+      <div class="svc-card">
+        <div class="svc-icon">
+          <svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="3"/><path d="M3 9h18M9 21V9"/></svg>
+        </div>
+        <h3>Online Sessions</h3>
+        <p>Secure video consultations available across all of India — no travel, no waiting rooms, complete privacy from your own space.</p>
+      </div>
+      <div class="svc-card">
+        <div class="svc-icon">
+          <svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.15 12 19.79 19.79 0 0 1 1.07 3.4 2 2 0 0 1 3 1h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L7.09 8.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 21 16z"/></svg>
+        </div>
+        <h3>Ongoing Support</h3>
+        <p>Between sessions, access our WhatsApp support line and curated resource library — because anxiety doesn't keep office hours.</p>
+      </div>
+      <div class="svc-card">
+        <div class="svc-icon">
+          <svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        </div>
+        <h3>Relapse Prevention</h3>
+        <p>We equip you with long-term coping frameworks so that calm becomes your default — not just a temporary state.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- STORIES -->
+  <section class="stories" id="stories">
+    <div class="reveal">
+      <p class="section-label">Recovery Stories</p>
+      <h2 class="section-title">50+ Real Journeys. Real Results.</h2>
+      <p class="section-sub">Every story in our library is a personalised account from someone who overcame weed-related anxiety — just like you can.</p>
+    </div>
+    <div class="stories-grid reveal">
+      <div class="story-card">
+        <div class="quote-mark">"</div>
+        <p>After two years of daily smoking, my anxiety had become unbearable. Fresh Mind matched me with a story so similar to mine that I finally believed recovery was possible. Within 6 weeks I was sleeping through the night.</p>
+        <div class="story-author">
+          <div class="story-avatar">R</div>
+          <div>
+            <div class="name">Rohan M.</div>
+            <div class="loc">Bengaluru, Karnataka</div>
+          </div>
+        </div>
+      </div>
+      <div class="story-card">
+        <div class="quote-mark">"</div>
+        <p>I didn't think online consulting could work for something this personal, but the personalised weed anxiety consulting session felt like talking to someone who genuinely understood. My panic attacks have reduced by 80%.</p>
+        <div class="story-author">
+          <div class="story-avatar">P</div>
+          <div>
+            <div class="name">Priya S.</div>
+            <div class="loc">Mumbai, Maharashtra</div>
+          </div>
+        </div>
+      </div>
+      <div class="story-card">
+        <div class="quote-mark">"</div>
+        <p>The story-matching approach is genius. Seeing how someone with my exact pattern overcame it gave me a roadmap I could actually follow. Three months later, I'm anxiety-free and back at work full-time.</p>
+        <div class="story-author">
+          <div class="story-avatar">A</div>
+          <div>
+            <div class="name">Arjun K.</div>
+            <div class="loc">Delhi NCR</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="faq" id="faq">
+    <div class="faq-inner reveal">
+      <div>
+        <p class="section-label">FAQs</p>
+        <h2 class="section-title">Common Questions</h2>
+        <p>If you don't find your answer here, reach out — we reply within 24 hours.</p>
+      </div>
+      <div class="faq-list">
+        <div class="faq-item">
+          <button class="faq-q" onclick="toggleFaq(this)">Is this consulting legal in India? <span class="arrow">+</span></button>
+          <div class="faq-a">Yes. Fresh Mind provides psychological consulting and peer-support coaching. We do not prescribe medication or dispense controlled substances. Our services are fully legal across India.</div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" onclick="toggleFaq(this)">How long does the program take? <span class="arrow">+</span></button>
+          <div class="faq-a">Most clients notice significant improvement within 4–8 weeks with weekly sessions. The full program is typically 12 weeks, though we adapt to your pace and needs.</div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" onclick="toggleFaq(this)">Is everything confidential? <span class="arrow">+</span></button>
+          <div class="faq-a">Absolutely. All sessions are conducted under strict confidentiality. We never share personal information with third parties. Your privacy is our highest priority.</div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" onclick="toggleFaq(this)">Do I need to have quit weed to start? <span class="arrow">+</span></button>
+          <div class="faq-a">No. Many of our clients begin consulting while still using cannabis. We meet you where you are and work towards reducing anxiety regardless of your current usage.</div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" onclick="toggleFaq(this)">What does a session cost? <span class="arrow">+</span></button>
+          <div class="faq-a">We offer a free first consultation. Subsequent sessions are priced affordably — contact us for current rates and any available payment plans.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="contact" id="contact">
+    <div class="contact-inner reveal">
+      <div class="contact-img">
+        <img src="001.jpg" alt="Begin your healing journey with Fresh Mind" />
+      </div>
+      <div>
+        <p class="section-label">Get In Touch</p>
+        <h2 class="section-title">Take the First Step Today</h2>
+        <p style="margin-bottom:2rem;">Book your free 30-minute consultation. All conversations are confidential, compassionate, and judgment-free. We offer weed-related anxiety overcome consulting online across all of India.</p>
+        <form class="contact-form" onsubmit="submitForm(event)">
+          <div class="form-row">
+            <div class="form-group">
+              <label>First Name</label>
+              <input type="text" placeholder="Anika" required />
+            </div>
+            <div class="form-group">
+              <label>Last Name</label>
+              <input type="text" placeholder="Sharma" required />
+            </div>
+          </div>
+          <div class="form-group">
+            <label>Email</label>
+            <input type="email" placeholder="you@email.com" required />
+          </div>
+          <div class="form-group">
+            <label>Phone (WhatsApp preferred)</label>
+            <input type="tel" placeholder="+91 98765 43210" />
+          </div>
+          <div class="form-group">
+            <label>How can we help?</label>
+            <textarea placeholder="Tell us a little about what you're experiencing..."></textarea>
+          </div>
+          <p class="form-note">✦ We respond within 24 hours · All information is kept strictly private</p>
+          <div id="form-success">Thank you! We'll be in touch within 24 hours. 🌿</div>
+          <button type="submit" class="btn-primary" style="border:none;cursor:pointer;">Send Message →</button>
+        </form>
+        <p style="margin-top:1.2rem;font-size:.85rem;">Or email us directly: <a href="mailto:freshmind@gmail.com" style="color:var(--teal);font-weight:500;">freshmind@gmail.com</a></p>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-top">
+      <div class="footer-brand">
+        <div class="logo-wrap">
+          <img src="fesrh_mind_logo.png" alt="Fresh Mind" />
+          <span>Fresh Mind</span>
+        </div>
+        <p>Personalised weed-related anxiety overcome consulting in India — guided by 50+ real recovery stories and delivered with compassion.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Quick Links</h4>
+        <a href="#about">About Us</a>
+        <a href="#services">How It Works</a>
+        <a href="#stories">Success Stories</a>
+        <a href="#faq">FAQs</a>
+        <a href="#contact">Contact</a>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <a href="mailto:freshmind@gmail.com">freshmind@gmail.com</a>
+        <a href="#contact">Book a Free Session</a>
+        <a href="#" onclick="openModal(event)">Member Sign In</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2025 Fresh Mind Psychology Care. All rights reserved.</span>
+      <span>Privacy Policy · Terms of Service</span>
+    </div>
+  </footer>
+
+  <!-- SIGN-IN MODAL -->
+  <div class="modal-overlay" id="modal" onclick="closeModalOnBg(event)">
+    <div class="modal" role="dialog" aria-modal="true">
+      <button class="modal-close" onclick="closeModal()" aria-label="Close">×</button>
+      <img class="modal-logo" src="fesrh_mind_logo.png" alt="Fresh Mind" />
+      <h2>Welcome Back</h2>
+      <p>Sign in to access your personalised recovery dashboard and session history.</p>
+      <button class="btn-google" onclick="googleSignIn()">
+        <svg viewBox="0 0 48 48"><path fill="#4285F4" d="M45.1 24.5c0-1.6-.1-3.1-.4-4.5H24v8.5h11.8c-.5 2.7-2 5-4.3 6.5v5.4h7c4.1-3.8 6.6-9.4 6.6-15.9z"/><path fill="#34A853" d="M24 46c5.9 0 10.9-2 14.5-5.4l-7-5.4c-2 1.3-4.5 2.1-7.5 2.1-5.8 0-10.7-3.9-12.4-9.1H4.3v5.6C7.9 41.5 15.4 46 24 46z"/><path fill="#FBBC05" d="M11.6 28.2c-.4-1.3-.7-2.7-.7-4.2s.3-2.9.7-4.2v-5.6H4.3C2.8 17.3 2 20.6 2 24s.8 6.7 2.3 9.8l7.3-5.6z"/><path fill="#EA4335" d="M24 10.7c3.3 0 6.2 1.1 8.5 3.3l6.4-6.4C34.9 4 29.9 2 24 2 15.4 2 7.9 6.5 4.3 13.4l7.3 5.6c1.7-5.2 6.6-8.3 12.4-8.3z"/></svg>
+        Continue with Google
+      </button>
+      <div class="divider"><span>or sign in with email</span></div>
+      <input class="modal-input" type="email" placeholder="your@email.com" id="modal-email" />
+      <input class="modal-input" type="password" placeholder="Password" id="modal-pass" />
+      <button class="modal-submit" onclick="emailSignIn()">Sign In</button>
+      <p style="margin-top:1rem;font-size:.8rem;color:var(--muted);">Don't have an account? <a href="#contact" onclick="closeModal()" style="color:var(--teal);">Book a free session →</a></p>
+    </div>
+  </div>
+
+  <script>
+    /* ── Navbar scroll shadow ── */
+    window.addEventListener('scroll', () => {
+      document.getElementById('navbar').classList.toggle('scrolled', window.scrollY > 20);
+    });
+
+    /* ── Scroll reveal ── */
+    const reveals = document.querySelectorAll('.reveal');
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); io.unobserve(e.target); } });
+    }, { threshold: .12 });
+    reveals.forEach(el => io.observe(el));
+
+    /* ── FAQ accordion ── */
+    function toggleFaq(btn) {
+      const item = btn.closest('.faq-item');
+      const isOpen = item.classList.contains('open');
+      document.querySelectorAll('.faq-item.open').forEach(i => i.classList.remove('open'));
+      if (!isOpen) item.classList.add('open');
+    }
+
+    /* ── Contact form ── */
+    function submitForm(e) {
+      e.preventDefault();
+      document.getElementById('form-success').style.display = 'block';
+      e.target.reset();
+      setTimeout(() => { document.getElementById('form-success').style.display = 'none'; }, 6000);
+    }
+
+    /* ── Modal ── */
+    function openModal(e) { e && e.preventDefault(); document.getElementById('modal').classList.add('open'); }
+    function closeModal() { document.getElementById('modal').classList.remove('open'); }
+    function closeModalOnBg(e) { if (e.target === document.getElementById('modal')) closeModal(); }
+    function googleSignIn() { alert('Google Sign-In: Connect this to your Supabase Auth + Google OAuth provider in the Supabase dashboard. See README for setup instructions.'); }
+    function emailSignIn() { alert('Email Sign-In: Connect this to Supabase Auth. See README for setup instructions.'); }
+  </script>
+</body>
+</html>
