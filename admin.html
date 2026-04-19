@@ -249,6 +249,24 @@
       </div>
     </div>
 
+    <!-- SQL Setup Banner -->
+    <div id="sql-banner" style="background:#fff8e1;border:1.5px solid #ffe082;border-radius:1rem;padding:1.2rem 1.6rem;margin-bottom:1.5rem;font-size:.85rem;line-height:1.7;display:none">
+      <strong style="color:#b8860b">⚠️ If you see no data or a permission error</strong>, run this SQL once in
+      <a href="https://supabase.com/dashboard/project/euugtqgvdltucagsvoxz/sql/new" target="_blank" style="color:var(--teal)">Supabase → SQL Editor</a>:<br/><br/>
+      <code style="display:block;background:#f5f5f5;padding:.8rem 1rem;border-radius:.5rem;font-size:.8rem;white-space:pre-wrap">-- Allow admin to READ enquiries (authenticated users only)
+create policy "Admin read" on enquiries
+  for select using (auth.role() = 'authenticated');
+
+-- Allow admin to UPDATE status
+create policy "Admin update" on enquiries
+  for update using (auth.role() = 'authenticated');
+
+-- Allow admin to DELETE
+create policy "Admin delete" on enquiries
+  for delete using (auth.role() = 'authenticated');</code>
+      <button onclick="document.getElementById('sql-banner').style.display='none'" style="margin-top:.8rem;padding:.3rem .8rem;border:1px solid #ddd;border-radius:.5rem;cursor:pointer;background:#fff;font-size:.8rem">Dismiss</button>
+    </div>
+
     <!-- Toolbar -->
     <div class="toolbar">
       <div class="search-wrap">
@@ -342,6 +360,7 @@
     document.getElementById('login-screen').style.display  = 'none';
     document.getElementById('dashboard').style.display     = 'block';
     document.getElementById('user-label').textContent      = user?.email || 'Admin';
+    document.getElementById('sql-banner').style.display    = 'block';
     loadEnquiries();
   }
 
@@ -356,6 +375,10 @@
     document.getElementById('enquiries-table').style.display = 'none';
     document.getElementById('empty').style.display           = 'none';
 
+    // Verify session is still valid
+    const { data: { user } } = await sb.auth.getUser();
+    if (!user) { signOut(); return; }
+
     const { data, error } = await sb
       .from('enquiries')
       .select('*')
@@ -364,11 +387,18 @@
     document.getElementById('loading').style.display = 'none';
 
     if (error) {
-      alert('Error loading enquiries: ' + error.message);
+      console.error('Supabase read error:', error.code, error.message);
+      const emptyEl = document.getElementById('empty');
+      emptyEl.style.display = 'block';
+      emptyEl.innerHTML = `
+        <svg viewBox="0 0 24 24" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><path d="M12 8v4m0 4h.01"/></svg>
+        <p style="color:#e05555;font-weight:500;margin-bottom:.4rem">Permission error: ${error.message}</p>
+        <p style="font-size:.8rem;color:#999">Run the SQL fix shown in the yellow banner above, then click Refresh.</p>`;
       return;
     }
 
     allData = data || [];
+    document.getElementById('sql-banner').style.display = 'none';
     updateStats();
     renderTable();
   }
