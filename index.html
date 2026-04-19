@@ -6,6 +6,38 @@
   <title>Fresh Mind – Weed-Related Anxiety Overcome Consulting in India</title>
   <meta name="description" content="Fresh Mind offers personalised weed-related anxiety overcome consulting in India. Join 50+ real recovery stories and speak with an expert online today." />
   <meta name="keywords" content="weed related anxiety overcome consulting in india, weed related anxiety overcome consulting, weed anxiety overcome consulting online" />
+  <meta name="robots" content="index, follow" />
+  <meta name="author" content="Fresh Mind Psychology Care" />
+  <link rel="canonical" href="https://freshmind.vercel.app/" />
+
+  <!-- Open Graph (WhatsApp / Facebook preview) -->
+  <meta property="og:title" content="Fresh Mind – Weed-Related Anxiety Overcome Consulting in India" />
+  <meta property="og:description" content="Personalised weed-related anxiety overcome consulting in India. 50+ real recovery stories. Book a free online session today." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://freshmind.vercel.app/" />
+  <meta property="og:locale" content="en_IN" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Fresh Mind – Weed Anxiety Consulting India" />
+  <meta name="twitter:description" content="50+ real recovery stories. Personalised weed-related anxiety overcome consulting online across India." />
+
+  <!-- Structured Data (Google rich results) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "MedicalBusiness",
+    "name": "Fresh Mind Psychology Care",
+    "description": "Personalised weed-related anxiety overcome consulting in India with 50+ real recovery stories.",
+    "url": "https://freshmind.vercel.app",
+    "email": "freshmind@gmail.com",
+    "areaServed": "India",
+    "availableLanguage": "English",
+    "priceRange": "Free first consultation",
+    "serviceType": "Weed-Related Anxiety Overcome Consulting",
+    "sameAs": []
+  }
+  </script>
 
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -558,24 +590,24 @@
           <div class="form-row">
             <div class="form-group">
               <label>First Name</label>
-              <input type="text" placeholder="Anika" required />
+              <input type="text" name="firstName" id="firstName" placeholder="Anika" required />
             </div>
             <div class="form-group">
               <label>Last Name</label>
-              <input type="text" placeholder="Sharma" required />
+              <input type="text" name="lastName" id="lastName" placeholder="Sharma" required />
             </div>
           </div>
           <div class="form-group">
             <label>Email</label>
-            <input type="email" placeholder="you@email.com" required />
+            <input type="email" name="email" id="userEmail" placeholder="you@email.com" required />
           </div>
           <div class="form-group">
             <label>Phone (WhatsApp preferred)</label>
-            <input type="tel" placeholder="+91 98765 43210" />
+            <input type="tel" name="phone" id="userPhone" placeholder="+91 98765 43210" />
           </div>
           <div class="form-group">
             <label>How can we help?</label>
-            <textarea placeholder="Tell us a little about what you're experiencing..."></textarea>
+            <textarea name="message" id="userMessage" placeholder="Tell us a little about what you're experiencing..."></textarea>
           </div>
           <p class="form-note">✦ We respond within 24 hours · All information is kept strictly private</p>
           <div id="form-success">Thank you! We'll be in touch within 24 hours. 🌿</div>
@@ -644,15 +676,20 @@
 
   <script>
     /* ════════════════════════════════════════════════
-       ① SUPABASE CONFIG
-       Replace YOUR_SUPABASE_URL and YOUR_ANON_KEY
-       with values from: Supabase → Project Settings → API
+       ① SUPABASE CONFIG — ✅ Keys configured
     ═══════════════════════════════════════════════ */
     const { createClient } = supabase;
-    const sb = createClient(
-      // https://euugtqgvdltucagsvoxz.supabase.co
-     // eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImV1dWd0cWd2ZGx0dWNhZ3N2b3h6Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzY1MTE0MjQsImV4cCI6MjA5MjA4NzQyNH0.EY6b8-hsLJIzl6WuzHUFD5L-JlO0sy7sTEREbr81O2M
-    );
+    // ════════════════════════════════════════════
+    // REPLACE THESE TWO VALUES with your Supabase
+    // Project URL and anon key from:
+    // Supabase → Settings → API
+    // ════════════════════════════════════════════
+    const SUPABASE_URL = 'https://euugtqgvdltucagsvoxz.supabase.co';
+    const SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImV1dWd0cWd2ZGx0dWNhZ3N2b3h6Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzY1MTE0MjQsImV4cCI6MjA5MjA4NzQyNH0.EY6b8-hsLJIzl6WuzHUFD5L-JlO0sy7sTEREbr81O2M';
+    const SUPABASE_CONFIGURED = !SUPABASE_URL.includes('YOUR_');
+    const sb = SUPABASE_CONFIGURED
+      ? createClient(SUPABASE_URL, SUPABASE_KEY)
+      : null;
 
     /* ════════════════════════════════════════════════
        ② EMAILJS CONFIG
@@ -662,10 +699,10 @@
           {{from_name}}, {{from_email}}, {{phone}}, {{message}}, {{to_email}}
        4. Replace the three values below:
     ═══════════════════════════════════════════════ */
-    emailjs.init('uMOtprRSpV5GsZwgt'); // from EmailJS → Account → Public Key
+    emailjs.init('YOUR_EMAILJS_PUBLIC_KEY'); // from EmailJS → Account → Public Key
 
-    const EMAILJS_SERVICE_ID  = service_6parkxm
-    const EMAILJS_TEMPLATE_ID = template_6qaug5e
+    const EMAILJS_SERVICE_ID  = 'YOUR_SERVICE_ID';   // e.g. service_abc123
+    const EMAILJS_TEMPLATE_ID = 'YOUR_TEMPLATE_ID';  // e.g. template_xyz456
 
     /* ── Navbar scroll shadow ── */
     window.addEventListener('scroll', () => {
@@ -717,11 +754,11 @@
       const form = e.target;
       const btn  = form.querySelector('button[type="submit"]');
 
-      const firstName = form.querySelector('input[placeholder="Anika"]').value.trim();
-      const lastName  = form.querySelector('input[placeholder="Sharma"]').value.trim();
-      const email     = form.querySelector('input[type="email"]').value.trim();
-      const phone     = form.querySelector('input[type="tel"]').value.trim();
-      const message   = form.querySelector('textarea').value.trim();
+      const firstName = (form.querySelector('#firstName') || form.querySelector('input[name="firstName"]')).value.trim();
+      const lastName  = (form.querySelector('#lastName')  || form.querySelector('input[name="lastName"]')).value.trim();
+      const email     = (form.querySelector('#userEmail') || form.querySelector('input[type="email"]')).value.trim();
+      const phone     = (form.querySelector('#userPhone') || form.querySelector('input[type="tel"]') || {value:''}).value.trim();
+      const message   = (form.querySelector('#userMessage') || form.querySelector('textarea') || {value:''}).value.trim();
       const fullName  = `${firstName} ${lastName}`.trim();
 
       btn.textContent = 'Saving…';
@@ -731,19 +768,24 @@
       const errors = [];
 
       /* ── 1. Save to Supabase DB ── */
-      try {
-        const { error: dbErr } = await sb.from('enquiries').insert({
-          full_name : fullName,
-          email     : email,
-          phone     : phone   || null,
-          message   : message || null,
-          status    : 'new',
-        });
-        if (dbErr) throw dbErr;
-        dbOk = true;
-      } catch (err) {
-        errors.push('DB: ' + (err.message || err));
-        console.error('Supabase insert error:', err);
+      if (SUPABASE_CONFIGURED && sb) {
+        try {
+          const { error: dbErr } = await sb.from('enquiries').insert({
+            full_name : fullName,
+            email     : email,
+            phone     : phone   || null,
+            message   : message || null,
+            status    : 'new',
+          });
+          if (dbErr) throw dbErr;
+          dbOk = true;
+          console.log('✅ Saved to Supabase DB');
+        } catch (err) {
+          errors.push('DB: ' + (err.message || err));
+          console.error('Supabase insert error:', err);
+        }
+      } else {
+        console.warn('Supabase not configured — skipping DB save');
       }
 
       /* ── 2. Send email to raaharsh@gmail.com ── */
@@ -784,60 +826,58 @@
        ④ SUPABASE AUTH – Google OAuth
     ═══════════════════════════════════════════════ */
     async function googleSignIn() {
-      // Check if Supabase is configured
-      if (document.querySelector('script[src*="supabase"]') &&
-          typeof sb !== 'undefined') {
-        try {
-          const { error } = await sb.auth.signInWithOAuth({
-            provider: 'google',
-            options : { redirectTo: window.location.origin }
-          });
-          if (error) throw error;
-        } catch(err) {
-          if (err.message && (err.message.includes('Invalid') || err.message.includes('not found'))) {
-            alert('Login is not yet configured. Please contact us at freshmind@gmail.com to book a session.');
-          } else {
-            alert('Sign-in error: ' + err.message);
-          }
-        }
-      } else {
-        alert('Please contact us at freshmind@gmail.com to book your free consultation.');
+      if (!SUPABASE_CONFIGURED || !sb) {
+        alert('⚠️ Supabase is not yet configured.\n\nTo enable Google Sign-In:\n1. Go to supabase.com → your project → Settings → API\n2. Copy Project URL and anon key\n3. Paste into SUPABASE_URL and SUPABASE_KEY in index.html\n\nFor now, book a session at freshmind@gmail.com');
+        return;
+      }
+      try {
+        const { error } = await sb.auth.signInWithOAuth({
+          provider: 'google',
+          options : { redirectTo: window.location.origin }
+        });
+        if (error) throw error;
+      } catch(err) {
+        alert('Google Sign-In failed: ' + err.message);
       }
     }
 
     /* ── SUPABASE AUTH – Email / Password ── */
     async function emailSignIn() {
+      if (!SUPABASE_CONFIGURED || !sb) {
+        alert('⚠️ Supabase is not yet configured. Please add your Supabase URL and key to index.html.');
+        return;
+      }
       const email    = document.getElementById('modal-email').value.trim();
       const password = document.getElementById('modal-pass').value;
-
       if (!email || !password) { alert('Please enter your email and password.'); return; }
-
       const { error } = await sb.auth.signInWithPassword({ email, password });
       if (error) {
         alert('Sign-in failed: ' + error.message);
       } else {
         closeModal();
-        // Refresh UI to reflect logged-in state
         const { data: { user } } = await sb.auth.getUser();
-        if (user) {
-          document.querySelector('.btn-nav').textContent = user.email.split('@')[0];
-        }
+        if (user) document.querySelector('.btn-nav').textContent = user.email.split('@')[0];
       }
     }
 
     /* ── Listen for auth state changes (e.g. after Google redirect) ── */
-    sb.auth.onAuthStateChange((event, session) => {
-      if (session?.user) {
+    if (SUPABASE_CONFIGURED && sb) {
+      sb.auth.onAuthStateChange((event, session) => {
         const navBtn = document.querySelector('.btn-nav');
-        navBtn.textContent = session.user.email.split('@')[0];
-        navBtn.onclick = async (ev) => {
-          ev.preventDefault();
-          await sb.auth.signOut();
+        if (session?.user) {
+          navBtn.textContent = session.user.email.split('@')[0];
+          navBtn.onclick = async (ev) => {
+            ev.preventDefault();
+            await sb.auth.signOut();
+            navBtn.textContent = 'Sign In';
+            navBtn.onclick = (e) => openModal(e);
+          };
+        } else {
           navBtn.textContent = 'Sign In';
           navBtn.onclick = (e) => openModal(e);
-        };
-      }
-    });
+        }
+      });
+    }
 
     /* ── Modal helpers ── */
     function openModal(e) { e && e.preventDefault(); document.getElementById('modal').classList.add('open'); }
